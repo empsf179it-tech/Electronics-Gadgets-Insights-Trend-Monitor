@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Electronics Gadgets Insights & Trend Monitor</title>
+    <meta name="description" content="Discover the latest electronics, explore emerging innovations, compare cutting-edge gadgets, and stay ahead of the technology shaping tomorrow.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS (Utilities) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper & AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar custom-navbar">
+    <div class="container-fluid container-xl">
+        <a class="navbar-brand brand-logo" href="index.html">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#001a5e"/><stop offset="50%" stop-color="#0066ff"/><stop offset="100%" stop-color="#00d2ff"/></linearGradient></defs><path d="M 60 10 A 40 40 0 1 0 90 50 L 75 50 A 25 25 0 1 1 50 25 L 50 10 Z" fill="url(#logoGrad)"/><path d="M 15 65 Q 50 90 95 55 L 85 55 L 100 35 L 85 45 Q 50 75 15 65 Z" fill="#00d2ff"/><rect x="30" y="38" width="12" height="20" rx="2" fill="#001a5e"/><rect x="32" y="40" width="8" height="14" fill="#0066ff"/><path d="M 47 46 A 8 8 0 0 1 63 46" fill="none" stroke="#001a5e" stroke-width="2.5"/><rect x="45" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="61" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="71" y="42" width="10" height="12" rx="2" fill="#001a5e"/><rect x="73" y="44" width="6" height="8" fill="#0066ff"/><rect x="73" y="38" width="6" height="4" fill="#001a5e"/><rect x="73" y="54" width="6" height="4" fill="#001a5e"/></svg>
+            <span class="brand-text">Tech Intel</span>
+        </a>
+        <div class="nav-links d-none d-xl-flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="gadgets.html" class="nav-link">Gadgets</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="trends.html" class="nav-link">Trends</a>
+            <a href="insights.html" class="nav-link">Insights</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+        <div class="nav-actions d-none d-xl-flex align-items-center gap-3">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <button class="btn-primary-custom border-0" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="trends.html">Trends</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="active">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+    </button>
+    <a href="#" class="btn-primary-custom" style="font-size: 1rem; padding: 0.5rem 1.5rem;" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
+</div>
+
+<!-- Hero -->
+<section class="hero-section text-center" style="min-height: 40vh; padding-top: 8rem;">
+    <div class="container container-xl">
+        <h1 class="hero-title">Get in Touch</h1>
+        <p class="hero-subtitle mx-auto">Have a question, suggestion, or partnership idea? We'd love to hear from you.</p>
+    </div>
+</section>
+
+<!-- Contact Form & Info -->
+<section class="section-padding" style="background: var(--card-bg); border-top: 1px solid var(--border-color);">
+    <div class="container container-xl">
+        <div class="row g-5">
+            <!-- Left: Info & Related Section -->
+            <div class="col-lg-5">
+                <div class="glass-panel p-4 mb-4">
+                    <h3 class="mb-4">Contact Information</h3>
+                    <ul class="text-secondary list-unstyled">
+                        <li class="mb-4 d-flex align-items-start gap-3">
+                            <div class="p-2 bg-light rounded text-accent" style="background-color: var(--card-bg) !important; border: 1px solid var(--border-color);"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <strong class="d-block" style="color: var(--text-primary);">Headquarters</strong>
+                                Tech Intelligence Hub, Cyber City, NY 10001
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start gap-3">
+                            <div class="p-2 bg-light rounded text-accent" style="background-color: var(--card-bg) !important; border: 1px solid var(--border-color);"><i data-lucide="mail"></i></div>
+                            <div>
+                                <strong class="d-block" style="color: var(--text-primary);">Email Us</strong>
+                                contact@techintel.sample.com
+                            </div>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start gap-3">
+                            <div class="p-2 bg-light rounded text-accent" style="background-color: var(--card-bg) !important; border: 1px solid var(--border-color);"><i data-lucide="phone"></i></div>
+                            <div>
+                                <strong class="d-block" style="color: var(--text-primary);">Call Us</strong>
+                                +1 (555) 019-2837
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Related Section: Global Offices -->
+                <div class="glass-panel p-4">
+                    <h3 class="mb-4">Global Offices</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="border p-3 rounded text-secondary" style="border-color: var(--border-color) !important; background: var(--bg-color);">
+                            <h5 class="mb-1" style="color: var(--text-primary);">London, UK</h5>
+                            <p class="mb-0 text-sm">Tech Tower, Silicon Roundabout, EC1V 1AB</p>
+                        </div>
+                        <div class="border p-3 rounded text-secondary" style="border-color: var(--border-color) !important; background: var(--bg-color);">
+                            <h5 class="mb-1" style="color: var(--text-primary);">Tokyo, Japan</h5>
+                            <p class="mb-0 text-sm">Innovation Center, Akihabara, 101-0021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="col-lg-7">
+                <div class="glass-panel p-5 h-100">
+                    <h3 class="mb-4">Send us a Message</h3>
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Inquiry Type</label>
+                                <select class="form-select" required>
+                                    <option value="">Select one...</option>
+                                    <option>General Inquiry</option>
+                                    <option>Gadget Recommendation</option>
+                                    <option>Editorial Suggestion</option>
+                                    <option>Partnership</option>
+                                    <option>Technical Support</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn-primary-custom w-100 py-3" style="border-radius: 12px;">Send Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section-padding pt-0" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <h2 class="h1 mb-5 text-center">Find Us on the Map</h2>
+        <div class="rounded-4 overflow-hidden shadow-sm glass-panel" style="height: 450px; padding: 0;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2153839213894!2d-73.9904944!3d40.7572393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1714578912345!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="h1">Frequently Asked Questions</h2>
+                    <p class="text-secondary">Quick answers to common questions about our platform.</p>
+                </div>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item bg-transparent" style="border: none; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent fw-bold shadow-none p-0 py-3" style="color: var(--text-primary); font-size: 1.1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How often do you publish new gadget reviews?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary px-0 pt-2 pb-4">
+                                We publish new in-depth reviews every Tuesday and Thursday. Our trend insights and news roundup articles are updated daily to keep you at the bleeding edge of technology.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-transparent" style="border: none; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent fw-bold shadow-none p-0 py-3" style="color: var(--text-primary); font-size: 1.1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you accept guest posts or editorial suggestions?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary px-0 pt-2 pb-4">
+                                Yes! We are always looking for fresh perspectives on technology. You can submit your editorial suggestions through our contact form by selecting "Editorial Suggestion" in the inquiry type dropdown.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-transparent" style="border: none; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent fw-bold shadow-none p-0 py-3" style="color: var(--text-primary); font-size: 1.1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How do you ensure the impartiality of your reviews?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary px-0 pt-2 pb-4">
+                                Our editorial team operates completely independently from our advertising department. We purchase many of the products we review ourselves, and if a product is provided by a manufacturer, we clearly disclose it.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-transparent" style="border: none; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent fw-bold shadow-none p-0 py-3" style="color: var(--text-primary); font-size: 1.1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                How can I partner with Tech Intel?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary px-0 pt-2 pb-4">
+                                We offer various partnership opportunities including sponsored content, banner advertising, and newsletter sponsorships. Please select "Partnership" in the contact form to receive our media kit.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-transparent" style="border: none;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent fw-bold shadow-none p-0 py-3" style="color: var(--text-primary); font-size: 1.1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Can I subscribe to your content via email?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-secondary px-0 pt-2 pb-4">
+                                Absolutely. We have a weekly newsletter that summarizes the top trends and reviews. You can subscribe using the newsletter form located in the footer of any page on our website.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="custom-footer">
+    <div class="container container-xl">
+        <div class="row g-4">
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="footer-brand brand-logo mb-3">
+                    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#001a5e"/><stop offset="50%" stop-color="#0066ff"/><stop offset="100%" stop-color="#00d2ff"/></linearGradient></defs><path d="M 60 10 A 40 40 0 1 0 90 50 L 75 50 A 25 25 0 1 1 50 25 L 50 10 Z" fill="url(#logoGrad)"/><path d="M 15 65 Q 50 90 95 55 L 85 55 L 100 35 L 85 45 Q 50 75 15 65 Z" fill="#00d2ff"/><rect x="30" y="38" width="12" height="20" rx="2" fill="#001a5e"/><rect x="32" y="40" width="8" height="14" fill="#0066ff"/><path d="M 47 46 A 8 8 0 0 1 63 46" fill="none" stroke="#001a5e" stroke-width="2.5"/><rect x="45" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="61" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="71" y="42" width="10" height="12" rx="2" fill="#001a5e"/><rect x="73" y="44" width="6" height="8" fill="#0066ff"/><rect x="73" y="38" width="6" height="4" fill="#001a5e"/><rect x="73" y="54" width="6" height="4" fill="#001a5e"/></svg>
+                    <span class="brand-text">Tech Intel</span>
+                </div>
+                <p class="text-secondary text-sm max-w-300">Premium electronics intelligence, gadget discovery, and technology trends platform.</p>
+                <div class="social-links mt-4">
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Explore</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gadgets.html">Gadgets</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="trends.html">Trends</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Categories</h5>
+                <ul class="footer-links">
+                    <li><a href="gadgets.html">Smartphones</a></li>
+                    <li><a href="gadgets.html">Computing</a></li>
+                    <li><a href="gadgets.html">Wearables</a></li>
+                    <li><a href="gadgets.html">Audio</a></li>
+                    <li><a href="gadgets.html">Gaming</a></li>
+                    <li><a href="gadgets.html">Smart Home</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Account</h5>
+                <ul class="footer-links">
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Login</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Register</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-12">
+                <h5 class="footer-title">Newsletter</h5>
+                <form class="d-flex flex-column gap-2">
+                    <input type="email" class="form-control" placeholder="Email address" required>
+                    <button type="submit" class="btn-primary-custom w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">2026</span> Electronics Gadgets Insights & Trend Monitor. All rights reserved.</p>
+            <p>Designed for the Future.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+</a>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Auth Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 24px;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title h4" id="authModalLabel">Welcome Back</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                
+                <!-- Login View -->
+                <div id="authLoginView">
+                    <p class="text-secondary mb-4">Sign in to your account to continue accessing premium insights.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label font-mono text-sm text-secondary">Password</label>
+                                <a href="#" class="text-accent text-sm text-decoration-none font-mono">Forgot?</a>
+                            </div>
+                            <input type="password" class="form-control" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
+                        </div>
+                        <button type="button" class="btn-primary-custom w-100 py-3 mb-3 border-0" style="border-radius: 12px;" data-bs-dismiss="modal">Sign In</button>
+                        <div class="text-center">
+                            <span class="text-secondary text-sm">Don't have an account?</span>
+                            <a href="#" class="text-accent text-decoration-none fw-bold ms-1 text-sm" onclick="document.getElementById('authLoginView').classList.add('d-none'); document.getElementById('authRegisterView').classList.remove('d-none'); document.getElementById('authModalLabel').innerText='Create an Account'; return false;">Sign Up</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Register View -->
+                <div id="authRegisterView" class="d-none">
+                    <p class="text-secondary mb-4">Join us to explore the future of electronics and technology.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label font-mono text-sm text-secondary">Password</label>
+                            <input type="password" class="form-control" placeholder="Create a password" required>
+                        </div>
+                        <button type="button" class="btn-primary-custom w-100 py-3 mb-3 border-0" style="border-radius: 12px;" data-bs-dismiss="modal">Create Account</button>
+                        <div class="text-center">
+                            <span class="text-secondary text-sm">Already have an account?</span>
+                            <a href="#" class="text-accent text-decoration-none fw-bold ms-1 text-sm" onclick="document.getElementById('authRegisterView').classList.add('d-none'); document.getElementById('authLoginView').classList.remove('d-none'); document.getElementById('authModalLabel').innerText='Welcome Back'; return false;">Sign In</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

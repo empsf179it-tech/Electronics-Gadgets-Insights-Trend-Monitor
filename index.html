@@ -1,0 +1,652 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Gadgets Insights & Trend Monitor</title>
+    <meta name="description" content="Discover the latest electronics, explore emerging innovations, compare cutting-edge gadgets, and stay ahead of the technology shaping tomorrow.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS (Utilities) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper & AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar custom-navbar">
+    <div class="container-fluid container-xl">
+        <a class="navbar-brand brand-logo" href="index.html">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#001a5e"/><stop offset="50%" stop-color="#0066ff"/><stop offset="100%" stop-color="#00d2ff"/></linearGradient></defs><path d="M 60 10 A 40 40 0 1 0 90 50 L 75 50 A 25 25 0 1 1 50 25 L 50 10 Z" fill="url(#logoGrad)"/><path d="M 15 65 Q 50 90 95 55 L 85 55 L 100 35 L 85 45 Q 50 75 15 65 Z" fill="#00d2ff"/><rect x="30" y="38" width="12" height="20" rx="2" fill="#001a5e"/><rect x="32" y="40" width="8" height="14" fill="#0066ff"/><path d="M 47 46 A 8 8 0 0 1 63 46" fill="none" stroke="#001a5e" stroke-width="2.5"/><rect x="45" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="61" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="71" y="42" width="10" height="12" rx="2" fill="#001a5e"/><rect x="73" y="44" width="6" height="8" fill="#0066ff"/><rect x="73" y="38" width="6" height="4" fill="#001a5e"/><rect x="73" y="54" width="6" height="4" fill="#001a5e"/></svg>
+            <span class="brand-text">Tech Intel</span>
+        </a>
+        <div class="nav-links d-none d-xl-flex">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="gadgets.html" class="nav-link">Gadgets</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="trends.html" class="nav-link">Trends</a>
+            <a href="insights.html" class="nav-link">Insights</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions d-none d-xl-flex align-items-center gap-3">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <button class="btn-primary-custom border-0" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="gadgets.html">Gadgets</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="trends.html">Trends</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle Theme">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <i data-lucide="moon" class="moon-icon"></i>
+    </button>
+    <a href="#" class="btn-primary-custom" style="font-size: 1rem; padding: 0.5rem 1.5rem;" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
+</div>
+
+<!-- 1. Cinematic Hero -->
+<section class="hero-section">
+    <div class="hero-bg-elements">
+        <div class="hero-glow"></div>
+    </div>
+    <div class="container container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-6 z-2">
+                <div class="tech-label">TECH INTELLIGENCE / 2026</div>
+                <h1 class="hero-title">The Future of Tech.<br>Decoded Today.</h1>
+                <p class="hero-subtitle">Discover the latest electronics, explore emerging innovations, compare cutting-edge gadgets, and stay ahead of the technology shaping tomorrow.</p>
+                <div class="hero-actions d-flex gap-3">
+                    <a href="gadgets.html" class="btn-primary-custom">Explore Gadgets <i data-lucide="arrow-right"></i></a>
+                    <a href="trends.html" class="btn-outline-custom">Discover Trends</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-visual">
+                    <img src="assets/images/image-1.png" alt="Futuristic Gadget Composition" class="hero-main-img">
+                    <div class="hero-floating-card fc-1">
+                        <i data-lucide="cpu" class="text-cyan"></i>
+                        <div>
+                            <span class="d-block font-mono">Performance</span>
+                            <strong>Next-Gen AI Chip</strong>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card fc-2">
+                        <i data-lucide="battery-charging" class="text-accent"></i>
+                        <div>
+                            <span class="d-block font-mono">Efficiency</span>
+                            <strong>48H Battery Life</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. Technology Pulse -->
+<div class="tech-pulse">
+    <div class="pulse-track">
+        <!-- Repeat items for infinite scroll effect -->
+        <div class="pulse-item"><i data-lucide="zap" class="text-accent"></i> Consumer Electronics</div>
+        <div class="pulse-item"><i data-lucide="cpu" class="text-accent"></i> AI Devices</div>
+        <div class="pulse-item"><i data-lucide="watch" class="text-accent"></i> Smart Wearables</div>
+        <div class="pulse-item"><i data-lucide="laptop" class="text-accent"></i> Computing</div>
+        <div class="pulse-item"><i data-lucide="gamepad-2" class="text-accent"></i> Gaming Technology</div>
+        <div class="pulse-item"><i data-lucide="home" class="text-accent"></i> Smart Home</div>
+        <div class="pulse-item"><i data-lucide="zap" class="text-accent"></i> Consumer Electronics</div>
+        <div class="pulse-item"><i data-lucide="cpu" class="text-accent"></i> AI Devices</div>
+        <div class="pulse-item"><i data-lucide="watch" class="text-accent"></i> Smart Wearables</div>
+        <div class="pulse-item"><i data-lucide="laptop" class="text-accent"></i> Computing</div>
+        <div class="pulse-item"><i data-lucide="gamepad-2" class="text-accent"></i> Gaming Technology</div>
+        <div class="pulse-item"><i data-lucide="home" class="text-accent"></i> Smart Home</div>
+    </div>
+</div>
+
+<!-- 3. Trending Gadgets -->
+<section class="section-padding">
+    <div class="container container-xl">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <div>
+                <h2 class="h1 mb-2">Trending Gadgets</h2>
+                <p class="text-secondary mb-0">The most discussed devices in the tech sphere.</p>
+            </div>
+            <a href="gadgets.html" class="btn-text d-none d-md-flex align-items-center gap-2">View All <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        
+        <div class="grid-asymmetric">
+            <div class="col-span-8">
+                <div class="card-3d d-flex flex-column h-100">
+                    <img src="assets/images/image-62.png" alt="Wearable" class="h-100" style="max-height: 400px; object-fit: cover; width: 100%;">
+                    <div class="card-content">
+                        <span class="font-mono text-cyan mb-2 d-block">Wearables</span>
+                        <h3>Aero Watch Series 5</h3>
+                        <p class="text-secondary">Advanced health tracking and sleek design for your active lifestyle.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <button class="btn-primary-custom py-2 px-4" data-bs-toggle="modal" data-bs-target="#gadgetModal">View Insights</button>
+                            <button class="btn-outline-custom p-2"><i data-lucide="bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4">
+                <div class="card-3d d-flex flex-column h-100">
+                    <img src="assets/images/image-3.png" alt="Laptop" style="max-height: 250px; object-fit: cover; width: 100%; height: 100%;">
+                    <div class="card-content flex-grow-1 d-flex flex-column justify-content-end">
+                        <span class="font-mono text-accent mb-2 d-block">Computing</span>
+                        <h4>Quantum Book AI</h4>
+                        <p class="text-secondary text-sm">Next-generation laptop powered by artificial intelligence.</p>
+                        <button class="btn-text p-0 mt-3 text-start" data-bs-toggle="modal" data-bs-target="#gadgetModal">View Insights <i data-lucide="arrow-right" class="ms-1 w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Explore Technology Categories -->
+<section class="section-padding" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <h2 class="h1 mb-5 text-center">Explore Technology Categories</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-45.png" alt="Smartphones"><div class="cat-overlay"><h4>Smartphones</h4><p>120+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-6.png" alt="Laptops"><div class="cat-overlay"><h4>Laptops</h4><p>85+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-46.png" alt="Audio"><div class="cat-overlay"><h4>Audio</h4><p>150+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-42.png" alt="Gaming"><div class="cat-overlay"><h4>Gaming</h4><p>90+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-27.png" alt="Smart Home"><div class="cat-overlay"><h4>Smart Home</h4><p>200+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-33.png" alt="Cameras"><div class="cat-overlay"><h4>Cameras</h4><p>60+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-11.png" alt="Wearables"><div class="cat-overlay"><h4>Wearables</h4><p>110+ Devices</p></div></div></div>
+            <div class="col-12 col-md-3"><div class="cat-card"><img src="assets/images/image-10.png" alt="Tablets"><div class="cat-overlay"><h4>Tablets</h4><p>45+ Devices</p></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Innovation Spotlight -->
+<section class="section-padding position-relative">
+    <div class="container container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="position-relative">
+                    <img src="assets/images/image-13.png" alt="Innovation" class="rounded-4 shadow-lg w-100" style="aspect-ratio: 4/5; object-fit: cover;">
+                    <div class="glass-panel position-absolute bottom-0 start-0 m-4 p-4 d-none d-md-block" style="max-width: 300px;">
+                        <h5 class="mb-2">Key Takeaway</h5>
+                        <p class="text-sm mb-0">The integration of neural engines is redefining daily mobile tasks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1" data-aos="fade-left">
+                <span class="font-mono text-accent mb-3 d-block">Innovation Spotlight</span>
+                <h2 class="display-5 mb-4">The Rise of Neural Processing Units.</h2>
+                <p class="text-secondary mb-4">Explore how dedicated AI hardware inside modern devices is shifting the paradigm from cloud-based processing to instant, on-device intelligence.</p>
+                <ul class="mb-5 text-secondary">
+                    <li class="mb-2"><i data-lucide="check" class="text-success me-2"></i> Enhanced Privacy</li>
+                    <li class="mb-2"><i data-lucide="check" class="text-success me-2"></i> Zero Latency AI</li>
+                    <li class="mb-2"><i data-lucide="check" class="text-success me-2"></i> Improved Battery Life</li>
+                </ul>
+                <a href="insights.html" class="btn-primary-custom">Read Insight</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Gadget Intelligence -->
+<section class="section-padding" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <div class="text-center mb-5 max-w-700 mx-auto">
+            <h2 class="h1">Gadget Intelligence</h2>
+            <p class="text-secondary">We track and analyze the metrics that define exceptional technology.</p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="p-4 rounded-4 border border-color h-100 card-3d">
+                    <div class="d-inline-flex p-3 rounded-circle bg-light mb-3"><i data-lucide="activity" class="text-accent"></i></div>
+                    <h4>Performance</h4>
+                    <p class="text-secondary text-sm">Benchmarking processing power and thermal efficiency.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 rounded-4 border border-color h-100 card-3d">
+                    <div class="d-inline-flex p-3 rounded-circle bg-light mb-3"><i data-lucide="battery" class="text-accent"></i></div>
+                    <h4>Battery Tech</h4>
+                    <p class="text-secondary text-sm">Analyzing discharge rates, charging speeds, and cell longevity.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-4 rounded-4 border border-color h-100 card-3d">
+                    <div class="d-inline-flex p-3 rounded-circle bg-light mb-3"><i data-lucide="wifi" class="text-accent"></i></div>
+                    <h4>Connectivity</h4>
+                    <p class="text-secondary text-sm">Evaluating 5G, Wi-Fi 7, and seamless ecosystem integration.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Compare Before You Choose -->
+<section class="section-padding">
+    <div class="container container-xl">
+        <div class="compare-container">
+            <div class="vs-badge">VS</div>
+            <div class="row text-center align-items-center">
+                <div class="col-md-5">
+                    <div class="compare-item">
+                        <img src="assets/images/image-5.png" alt="Laptop A">
+                        <h4>AeroBook Pro</h4>
+                        <p class="text-secondary mb-3">M3 Processor ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ 16GB RAM</p>
+                        <button class="btn-outline-custom btn-sm">Select Product</button>
+                    </div>
+                </div>
+                <div class="col-md-2 d-none d-md-block"></div>
+                <div class="col-md-5 mt-5 mt-md-0">
+                    <div class="compare-item">
+                        <img src="assets/images/image-7.png" alt="Laptop B">
+                        <h4>Zenith Studio</h4>
+                        <p class="text-secondary mb-3">Core Ultra 7 ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ 32GB RAM</p>
+                        <button class="btn-outline-custom btn-sm">Select Product</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="reviews.html" class="btn-primary-custom">Open Full Comparison <i data-lucide="sliders"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. Emerging Technology Trends -->
+<section class="section-padding" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <h2 class="h1 mb-5">Emerging Technology Trends</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <h4 class="mb-2">Spatial Computing</h4>
+                        <p class="text-secondary text-sm">The transition from flat screens to immersive 3D environments in daily computing.</p>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="mb-2">Solid-State Batteries</h4>
+                        <p class="text-secondary text-sm">Safer, denser, and faster-charging power sources for next-gen EVs and devices.</p>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="mb-2">AI Agents</h4>
+                        <p class="text-secondary text-sm">Software that acts autonomously on behalf of the user across applications.</p>
+                    </div>
+                </div>
+                <a href="trends.html" class="btn-text p-0 mt-3">Explore All Trends <i data-lucide="arrow-right" class="ms-1"></i></a>
+            </div>
+            <div class="col-lg-8" data-aos="zoom-in">
+                <img src="assets/images/image-28.png" alt="Tech Trends" class="rounded-4 w-100 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 9. Expert Reviews -->
+<section class="section-padding">
+    <div class="container container-xl">
+        <h2 class="h1 mb-5 text-center">Expert Reviews</h2>
+        <div class="swiper review-swiper pb-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card-3d p-4 h-100 d-flex flex-column">
+                        <img src="assets/images/image-61.png" alt="Headphones" class="rounded-3 mb-3" style="aspect-ratio: 1; object-fit: cover;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="font-mono text-accent text-sm">Audio</span>
+                            <div class="text-warning"><i data-lucide="star" class="fill-current w-4 h-4"></i> 4.8</div>
+                        </div>
+                        <h4 class="mb-2">Sonic 360 Pro</h4>
+                        <p class="text-secondary text-sm flex-grow-1">"The active noise cancellation is class-leading, though the bass tuning favors modern pop over classical."</p>
+                        <a href="reviews.html" class="btn-outline-custom w-100 mt-3">Read Full Review</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card-3d p-4 h-100 d-flex flex-column">
+                        <img src="assets/images/image-34.png" alt="Camera" class="rounded-3 mb-3" style="aspect-ratio: 1; object-fit: cover;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="font-mono text-cyan text-sm">Cameras</span>
+                            <div class="text-warning"><i data-lucide="star" class="fill-current w-4 h-4"></i> 4.5</div>
+                        </div>
+                        <h4 class="mb-2">Lumix Vision X</h4>
+                        <p class="text-secondary text-sm flex-grow-1">"A hybrid shooter's dream, offering incredible dynamic range and robust in-body stabilization."</p>
+                        <a href="reviews.html" class="btn-outline-custom w-100 mt-3">Read Full Review</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card-3d p-4 h-100 d-flex flex-column">
+                        <img src="assets/images/image-40.png" alt="Console" class="rounded-3 mb-3" style="aspect-ratio: 1; object-fit: cover;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="font-mono text-accent text-sm">Gaming</span>
+                            <div class="text-warning"><i data-lucide="star" class="fill-current w-4 h-4"></i> 4.9</div>
+                        </div>
+                        <h4 class="mb-2">PlayBox Series Z</h4>
+                        <p class="text-secondary text-sm flex-grow-1">"The leap in graphical fidelity is matched only by the zero-load times. A true next-gen experience."</p>
+                        <a href="reviews.html" class="btn-outline-custom w-100 mt-3">Read Full Review</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 10. Technology Insights & Articles -->
+<section class="section-padding" style="background: var(--card-bg);">
+    <div class="container container-xl">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+            <h2 class="h1 mb-0">Insights & Articles</h2>
+            <a href="insights.html" class="btn-text d-none d-md-flex align-items-center gap-2">View All <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="article-card">
+                    <div class="article-img">
+                        <span class="badge-category">Tech Explainer</span>
+                        <img src="assets/images/image-20.png" alt="Article 1">
+                    </div>
+                    <div class="article-content pt-0">
+                        <div class="article-meta">
+                            <span>By Alex Chen</span> ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ <span>Oct 12, 2026</span> ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ <span>5 min read</span>
+                        </div>
+                        <h3 class="article-title">Understanding Wi-Fi 7: Do You Need to Upgrade?</h3>
+                        <p class="text-secondary">A comprehensive look at the new wireless standard, its real-world speeds, and whether it justifies buying a new router today.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="article-card">
+                    <div class="article-img">
+                        <span class="badge-category">Future Innovations</span>
+                        <img src="assets/images/image-21.png" alt="Article 2">
+                    </div>
+                    <div class="article-content pt-0">
+                        <div class="article-meta">
+                            <span>By Sarah Jenkins</span> ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ <span>Oct 10, 2026</span> ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ <span>8 min read</span>
+                        </div>
+                        <h3 class="article-title">The Death of the Traditional Screen</h3>
+                        <p class="text-secondary">How AR glasses and projection technologies are preparing to replace the monitors and televisions we've relied on for decades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 11. Technology Community -->
+<section class="section-padding">
+    <div class="container container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <h2 class="h1 mb-4">Trusted by Tech Enthusiasts</h2>
+                <p class="text-secondary mb-5">Join a growing community of early adopters, tech professionals, and gadget lovers who rely on our insights.</p>
+                <div class="row g-4">
+                    <div class="col-12 col-12 col-md-6">
+                        <div class="stat-card p-3">
+                            <div class="stat-num text-cyan h2 mb-1" data-count="150">0</div>
+                            <span class="text-secondary text-sm">Gadgets Reviewed</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-12 col-md-6">
+                        <div class="stat-card p-3">
+                            <div class="stat-num text-accent h2 mb-1" data-count="50">0</div>
+                            <span class="text-secondary text-sm">Tech Trends Tracked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="glass-panel p-5 position-relative">
+                    <i data-lucide="quote" class="text-accent mb-4 w-10 h-10 opacity-50"></i>
+                    <p class="h4 mb-4 fw-normal line-height-base">"The depth of their technical analysis combined with a clean, readable format makes Tech Intel my first stop before making any electronics purchase."</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/images/image-22.png" alt="User" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
+                        <div>
+                            <strong class="d-block">Marcus T.</strong>
+                            <span class="text-secondary text-sm">Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 12. Final CTA -->
+<section class="section-padding position-relative overflow-hidden" style="background: var(--card-bg);">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, var(--shadow-glow) 0%, transparent 60%); opacity: 0.5;"></div>
+    <div class="container container-xl position-relative z-1 text-center py-5">
+        <h2 class="display-4 mb-4">Stay Ahead of What's Next.</h2>
+        <p class="text-secondary text-lg mb-5 max-w-700 mx-auto">Explore the ideas, devices, and innovations transforming the digital world.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap mobile-stack-buttons">
+            <a href="insights.html" class="btn-primary-custom btn-lg">Explore Insights</a>
+            <a href="register.html" class="btn-outline-custom btn-lg">Create an Account</a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal: Gadget Details (Reusable) -->
+<div class="modal fade" id="gadgetModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="assets/images/image-45.png" alt="Gadget Preview" class="rounded-4 w-100 bg-light">
+                    </div>
+                    <div class="col-md-6">
+                        <span class="font-mono text-accent text-sm mb-2 d-block">Smartphone</span>
+                        <h3 class="mb-2">Quantum Pro Max</h3>
+                        <p class="text-secondary text-sm mb-4">An illustrative overview of the Quantum Pro Max highlighting its AI processor and 48H battery life.</p>
+                        
+                        <h6 class="mb-3">Key Specs:</h6>
+                        <ul class="text-sm text-secondary mb-4">
+                            <li class="mb-2"><strong>Processor:</strong> Neural AI Chip Gen 3</li>
+                            <li class="mb-2"><strong>Display:</strong> 6.8" OLED 144Hz</li>
+                            <li class="mb-2"><strong>Battery:</strong> 5500mAh</li>
+                        </ul>
+                        <div class="d-flex gap-2">
+                            <a href="reviews.html" class="btn-primary-custom flex-grow-1">Compare</a>
+                            <button class="btn-outline-custom"><i data-lucide="bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="custom-footer">
+    <div class="container container-xl">
+        <div class="row g-4">
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="footer-brand brand-logo mb-3">
+                    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#001a5e"/><stop offset="50%" stop-color="#0066ff"/><stop offset="100%" stop-color="#00d2ff"/></linearGradient></defs><path d="M 60 10 A 40 40 0 1 0 90 50 L 75 50 A 25 25 0 1 1 50 25 L 50 10 Z" fill="url(#logoGrad)"/><path d="M 15 65 Q 50 90 95 55 L 85 55 L 100 35 L 85 45 Q 50 75 15 65 Z" fill="#00d2ff"/><rect x="30" y="38" width="12" height="20" rx="2" fill="#001a5e"/><rect x="32" y="40" width="8" height="14" fill="#0066ff"/><path d="M 47 46 A 8 8 0 0 1 63 46" fill="none" stroke="#001a5e" stroke-width="2.5"/><rect x="45" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="61" y="45" width="4" height="10" rx="2" fill="#001a5e"/><rect x="71" y="42" width="10" height="12" rx="2" fill="#001a5e"/><rect x="73" y="44" width="6" height="8" fill="#0066ff"/><rect x="73" y="38" width="6" height="4" fill="#001a5e"/><rect x="73" y="54" width="6" height="4" fill="#001a5e"/></svg>
+                    <span class="brand-text">Tech Intel</span>
+                </div>
+                <p class="text-secondary text-sm max-w-300">Premium electronics intelligence, gadget discovery, and technology trends platform.</p>
+                <div class="social-links mt-4">
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Explore</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gadgets.html">Gadgets</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="trends.html">Trends</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Categories</h5>
+                <ul class="footer-links">
+                    <li><a href="gadgets.html">Smartphones</a></li>
+                    <li><a href="gadgets.html">Computing</a></li>
+                    <li><a href="gadgets.html">Wearables</a></li>
+                    <li><a href="gadgets.html">Audio</a></li>
+                    <li><a href="gadgets.html">Gaming</a></li>
+                    <li><a href="gadgets.html">Smart Home</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="footer-title">Account</h5>
+                <ul class="footer-links">
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Login</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Register</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-12">
+                <h5 class="footer-title">Newsletter</h5>
+                <form class="d-flex flex-column gap-2">
+                    <input type="email" class="form-control" placeholder="Email address" required>
+                    <button type="submit" class="btn-primary-custom w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">2026</span> Electronics Gadgets Insights & Trend Monitor. All rights reserved.</p>
+            <p>Designed for the Future.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+</a>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Auth Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 24px;">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title h4" id="authModalLabel">Welcome Back</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                
+                <!-- Login View -->
+                <div id="authLoginView">
+                    <p class="text-secondary mb-4">Sign in to your account to continue accessing premium insights.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label font-mono text-sm text-secondary">Password</label>
+                                <a href="#" class="text-accent text-sm text-decoration-none font-mono">Forgot?</a>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢Ã¢â‚¬Â¢" required>
+                        </div>
+                        <button type="button" class="btn-primary-custom w-100 py-3 mb-3 border-0" style="border-radius: 12px;" data-bs-dismiss="modal">Sign In</button>
+                        <div class="text-center">
+                            <span class="text-secondary text-sm">Don't have an account?</span>
+                            <a href="#" class="text-accent text-decoration-none fw-bold ms-1 text-sm" onclick="document.getElementById('authLoginView').classList.add('d-none'); document.getElementById('authRegisterView').classList.remove('d-none'); document.getElementById('authModalLabel').innerText='Create an Account'; return false;">Sign Up</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Register View -->
+                <div id="authRegisterView" class="d-none">
+                    <p class="text-secondary mb-4">Join us to explore the future of electronics and technology.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label font-mono text-sm text-secondary">Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label font-mono text-sm text-secondary">Password</label>
+                            <input type="password" class="form-control" placeholder="Create a password" required>
+                        </div>
+                        <button type="button" class="btn-primary-custom w-100 py-3 mb-3 border-0" style="border-radius: 12px;" data-bs-dismiss="modal">Create Account</button>
+                        <div class="text-center">
+                            <span class="text-secondary text-sm">Already have an account?</span>
+                            <a href="#" class="text-accent text-decoration-none fw-bold ms-1 text-sm" onclick="document.getElementById('authRegisterView').classList.add('d-none'); document.getElementById('authLoginView').classList.remove('d-none'); document.getElementById('authModalLabel').innerText='Welcome Back'; return false;">Sign In</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
