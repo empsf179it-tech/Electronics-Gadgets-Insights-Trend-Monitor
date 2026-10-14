@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +32,7 @@
             <a href="contact.html" class="nav-link">Contact</a>
         </div>
         <div class="nav-actions d-none d-xl-flex align-items-center gap-3">
+            <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal"><i data-lucide="shopping-cart"></i><span class="nav-cart-badge">0</span></button>
             <button class="theme-toggle" id="themeToggle"><i data-lucide="sun" class="sun-icon"></i><i data-lucide="moon" class="moon-icon"></i></button>
             <button class="btn-primary-custom border-0" data-bs-toggle="modal" data-bs-target="#authModal">Login</button>
         </div>
@@ -46,10 +47,16 @@
     <a href="trends.html">Trends</a>
     <a href="insights.html">Insights</a>
     <a href="contact.html">Contact</a>
-    <button class="theme-toggle" aria-label="Toggle Theme">
-        <i data-lucide="sun" class="sun-icon"></i>
-        <i data-lucide="moon" class="moon-icon"></i>
-    </button>
+    <div class="d-flex align-items-center gap-3">
+        <button class="theme-toggle" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i data-lucide="shopping-cart"></i>
+            <span class="nav-cart-badge">0</span>
+        </button>
+    </div>
     <a href="#" class="btn-primary-custom" style="font-size: 1rem; padding: 0.5rem 1.5rem;" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
 </div>
 
@@ -76,57 +83,81 @@
         <div class="row g-4" id="gadgetGrid">
             <!-- SMARTPHONES -->
             <div class="col-xl-3 col-md-6 filter-item" data-category="smartphones">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-82.png" alt="Smartphone" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smartphone</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smartphone</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.8</span>
+                        </div>
                         <h4>Nova X1</h4>
                         <p class="text-secondary text-sm">Snapdragon 8 Gen 3 • 120Hz AMOLED</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$799</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Nova X1" data-price="$799"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smartphones">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-83.png" alt="Smartphone" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smartphone</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smartphone</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>PixelFold 2</h4>
                         <p class="text-secondary text-sm">Foldable • Tensor G4</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,799</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="PixelFold 2" data-price="$1,799"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smartphones">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-84.png" alt="Smartphone" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smartphone</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smartphone</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>Galaxy S24 Ultra</h4>
                         <p class="text-secondary text-sm">Titanium • AI Features</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,299</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Galaxy S24 Ultra" data-price="$1,299"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smartphones">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-85.png" alt="Smartphone" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smartphone</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smartphone</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>iPhone 16 Pro</h4>
                         <p class="text-secondary text-sm">A18 Pro • Spatial Video</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,199</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="iPhone 16 Pro" data-price="$1,199"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -134,57 +165,81 @@
 
             <!-- LAPTOPS -->
             <div class="col-xl-3 col-md-6 filter-item" data-category="laptops">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-1.png" alt="Laptop" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-cyan text-sm mb-1 d-block">Laptop</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-cyan text-sm d-block">Laptop</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>ZenBook 14</h4>
                         <p class="text-secondary text-sm">Core Ultra 7 • 32GB RAM</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,249</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="ZenBook 14" data-price="$1,249"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="laptops">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-2.png" alt="Laptop" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-cyan text-sm mb-1 d-block">Laptop</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-cyan text-sm d-block">Laptop</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>MacBook Pro M3</h4>
                         <p class="text-secondary text-sm">M3 Max • Liquid Retina</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$2,499</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="MacBook Pro M3" data-price="$2,499"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="laptops">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-3.png" alt="Laptop" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-cyan text-sm mb-1 d-block">Laptop</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-cyan text-sm d-block">Laptop</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.8</span>
+                        </div>
                         <h4>Dell XPS 15</h4>
                         <p class="text-secondary text-sm">OLED Display • RTX 4070</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,899</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Dell XPS 15" data-price="$1,899"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="laptops">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-4.png" alt="Laptop" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-cyan text-sm mb-1 d-block">Laptop</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-cyan text-sm d-block">Laptop</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>ThinkPad X1 Carbon</h4>
                         <p class="text-secondary text-sm">Ultra-light • Enterprise Security</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$1,699</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="ThinkPad X1 Carbon" data-price="$1,699"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -192,57 +247,81 @@
 
             <!-- AUDIO -->
             <div class="col-xl-3 col-md-6 filter-item" data-category="audio">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-77.png" alt="Audio" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Audio</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Audio</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.8</span>
+                        </div>
                         <h4>QuietComfort Ultra</h4>
                         <p class="text-secondary text-sm">Spatial Audio • Custom ANC</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$299</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="QuietComfort Ultra" data-price="$299"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="audio">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-78.png" alt="Audio" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Audio</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Audio</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>AirPods Pro 2</h4>
                         <p class="text-secondary text-sm">Adaptive Audio • USB-C</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$249</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="AirPods Pro 2" data-price="$249"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="audio">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-79.png" alt="Audio" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Audio</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Audio</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>Sony WH-1000XM5</h4>
                         <p class="text-secondary text-sm">Industry Leading ANC • 30h Battery</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$349</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Sony WH-1000XM5" data-price="$349"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="audio">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-80.png" alt="Audio" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Audio</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Audio</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.6</span>
+                        </div>
                         <h4>Sennheiser Momentum 4</h4>
                         <p class="text-secondary text-sm">Audiophile Sound • 60h Battery</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$379</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Sennheiser Momentum 4" data-price="$379"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -250,57 +329,81 @@
 
             <!-- GAMING -->
             <div class="col-xl-3 col-md-6 filter-item" data-category="gaming">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-41.png" alt="Gaming" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Gaming</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Gaming</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>Apex Controller</h4>
                         <p class="text-secondary text-sm">Hall Effect Joysticks • Haptic</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$179</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Apex Controller" data-price="$179"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="gaming">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-39.png" alt="Gaming" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Gaming</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Gaming</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>PlayStation 5 Pro</h4>
                         <p class="text-secondary text-sm">4K 120fps • Ray Tracing</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$699</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="PlayStation 5 Pro" data-price="$699"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="gaming">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-40.png" alt="Gaming" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Gaming</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Gaming</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.8</span>
+                        </div>
                         <h4>Xbox Series X</h4>
                         <p class="text-secondary text-sm">Game Pass • Quick Resume</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$499</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Xbox Series X" data-price="$499"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="gaming">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-42.png" alt="Gaming" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Gaming</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Gaming</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.9</span>
+                        </div>
                         <h4>Steam Deck OLED</h4>
                         <p class="text-secondary text-sm">Portable PC Gaming • HDR</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$549</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Steam Deck OLED" data-price="$549"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -308,57 +411,81 @@
 
             <!-- SMART HOME -->
             <div class="col-xl-3 col-md-6 filter-item" data-category="smart-home">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-25.png" alt="Smart Home" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smart Home</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smart Home</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.6</span>
+                        </div>
                         <h4>HomeHub Display</h4>
                         <p class="text-secondary text-sm">Matter Support • Thread</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$229</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="HomeHub Display" data-price="$229"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smart-home">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-28.png" alt="Smart Home" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smart Home</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smart Home</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.8</span>
+                        </div>
                         <h4>Nest Thermostat</h4>
                         <p class="text-secondary text-sm">Energy Saving • Smart AI</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$199</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Nest Thermostat" data-price="$199"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smart-home">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-30.png" alt="Smart Home" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smart Home</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smart Home</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.7</span>
+                        </div>
                         <h4>Philips Hue Starter</h4>
                         <p class="text-secondary text-sm">16M Colors • Sync Hub</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$159</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Philips Hue Starter" data-price="$159"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 filter-item" data-category="smart-home">
-                <div class="card-3d h-100 d-flex flex-column">
+                <div class="card-3d h-100 d-flex flex-column position-relative">
+                    <button class="btn-bookmark-floating" aria-label="Bookmark" title="Bookmark"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
                     <img src="assets/images/image-31.png" alt="Smart Home" style="height:250px; object-fit:cover;">
                     <div class="card-content flex-grow-1">
-                        <span class="font-mono text-accent text-sm mb-1 d-block">Smart Home</span>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="font-mono text-accent text-sm d-block">Smart Home</span>
+                            <span class="text-warning text-sm fw-semibold d-inline-flex align-items-center gap-1"><i data-lucide="star" class="fill-current w-3.5 h-3.5"></i> 4.6</span>
+                        </div>
                         <h4>Ring Video Doorbell</h4>
                         <p class="text-secondary text-sm">1080p HD • Motion Detection</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <button class="btn-primary-custom flex-grow-1 py-1" data-bs-toggle="modal" data-bs-target="#gadgetModal">Details</button>
-                            <button class="btn-outline-custom p-1"><i data-lucide="bookmark"></i></button>
+                        <div class="mt-auto pt-3 w-100">
+                            <div class="text-center mb-2">
+                                <span class="h4 mb-0 text-accent fw-bold">$99</span>
+                            </div>
+                            <button class="btn-primary-custom w-100 py-2 add-to-cart-btn" data-name="Ring Video Doorbell" data-price="$99"><i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -388,42 +515,7 @@
     </div>
 </section>
 
-<!-- Modal: Gadget Details -->
-<div class="modal fade" id="gadgetModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header border-0 pb-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pt-0">
-                <div class="row align-items-center">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="assets/images/image-82.png" alt="Gadget Preview" class="rounded-4 w-100 bg-light">
-                    </div>
-                    <div class="col-md-6">
-                        <span class="font-mono text-accent text-sm mb-2 d-block">Smartphone</span>
-                        <h3 class="mb-2">Nova X1</h3>
-                        <p class="text-secondary text-sm mb-4">Sample overview of the Nova X1, showcasing incredible processing speeds and dynamic display technology.</p>
-                        
-                        <h6 class="mb-3">Key Specs:</h6>
-                        <ul class="text-sm text-secondary mb-4">
-                            <li class="mb-2"><strong>Processor:</strong> Snapdragon 8 Gen 3</li>
-                            <li class="mb-2"><strong>Display:</strong> 6.7" AMOLED 120Hz</li>
-                            <li class="mb-2"><strong>Battery:</strong> 5000mAh</li>
-                            <li class="mb-2"><strong>Camera:</strong> 50MP Main</li>
-                        </ul>
-                        <div class="d-flex gap-2">
-                            <a href="reviews.html" class="btn-primary-custom flex-grow-1">Compare</a>
-                            <button class="btn-outline-custom"><i data-lucide="bookmark"></i> Save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<!-- Footer -->
 <footer class="custom-footer">
     <div class="container container-xl">
         <div class="row g-4">
@@ -506,6 +598,67 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="assets/js/main.js"></script>
+
+<!-- Modal: Gadget Details -->
+<div class="modal fade" id="gadgetModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="assets/images/image-82.png" alt="Gadget Preview" class="rounded-4 w-100 bg-light">
+                    </div>
+                    <div class="col-md-6">
+                        <span class="font-mono text-accent text-sm mb-2 d-block">Smartphone</span>
+                        <h3 class="mb-2">Nova X1</h3>
+                        <p class="text-secondary text-sm mb-4">Sample overview of the Nova X1, showcasing incredible processing speeds and dynamic display technology.</p>
+                        
+                        <h6 class="mb-3">Key Specs:</h6>
+                        <ul class="text-sm text-secondary mb-4">
+                            <li class="mb-2"><strong>Processor:</strong> Snapdragon 8 Gen 3</li>
+                            <li class="mb-2"><strong>Display:</strong> 6.7" AMOLED 120Hz</li>
+                            <li class="mb-2"><strong>Battery:</strong> 5000mAh</li>
+                            <li class="mb-2"><strong>Camera:</strong> 50MP Main</li>
+                        </ul>
+                        <div class="d-flex gap-2">
+                            <a href="reviews.html" class="btn-primary-custom flex-grow-1">Compare</a>
+                            <button class="btn-outline-custom"><i data-lucide="bookmark"></i> Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Shopping Cart -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-heading fw-bold d-flex align-items-center gap-2">
+                    <i data-lucide="shopping-cart" class="text-accent"></i> Your Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsList" class="d-flex flex-column gap-2 mb-3">
+                    <!-- Populated dynamically via JS -->
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-color">
+                    <span class="text-secondary fw-semibold">Subtotal</span>
+                    <strong class="h5 mb-0 text-accent fw-bold" id="cartTotalPrice">$0.00</strong>
+                </div>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn-primary-custom w-100 justify-content-center" data-bs-dismiss="modal">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Auth Modal -->
 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">

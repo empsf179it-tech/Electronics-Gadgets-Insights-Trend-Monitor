@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,7 @@
             <a href="contact.html" class="nav-link">Contact</a>
         </div>
         <div class="nav-actions d-none d-xl-flex align-items-center gap-3">
+            <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal"><i data-lucide="shopping-cart"></i><span class="nav-cart-badge">0</span></button>
             <button class="theme-toggle" id="themeToggle"><i data-lucide="sun" class="sun-icon"></i><i data-lucide="moon" class="moon-icon"></i></button>
         </div>
         <button class="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
@@ -40,10 +41,16 @@
     <a href="trends.html">Trends</a>
     <a href="insights.html">Insights</a>
     <a href="contact.html">Contact</a>
-    <button class="theme-toggle" aria-label="Toggle Theme">
-        <i data-lucide="sun" class="sun-icon"></i>
-        <i data-lucide="moon" class="moon-icon"></i>
-    </button>
+    <div class="d-flex align-items-center gap-3">
+        <button class="theme-toggle" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i data-lucide="shopping-cart"></i>
+            <span class="nav-cart-badge">0</span>
+        </button>
+    </div>
     <a href="#" class="btn-primary-custom" style="font-size: 1rem; padding: 0.5rem 1.5rem;" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
 </div>
 
@@ -117,6 +124,32 @@
                     </form>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Shopping Cart -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-heading fw-bold d-flex align-items-center gap-2">
+                    <i data-lucide="shopping-cart" class="text-accent"></i> Your Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsList" class="d-flex flex-column gap-2 mb-3">
+                    <!-- Populated dynamically via JS -->
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-color">
+                    <span class="text-secondary fw-semibold">Subtotal</span>
+                    <strong class="h5 mb-0 text-accent fw-bold" id="cartTotalPrice">$0.00</strong>
+                </div>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn-primary-custom w-100 justify-content-center" data-bs-dismiss="modal">Proceed to Checkout</button>
             </div>
         </div>
     </div>

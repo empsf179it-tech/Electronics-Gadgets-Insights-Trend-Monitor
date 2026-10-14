@@ -34,6 +34,7 @@
             <a href="contact.html" class="nav-link">Contact</a>
         </div>
         <div class="nav-actions d-none d-xl-flex align-items-center gap-3">
+            <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal"><i data-lucide="shopping-cart"></i><span class="nav-cart-badge">0</span></button>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
                 <i data-lucide="sun" class="sun-icon"></i>
                 <i data-lucide="moon" class="moon-icon"></i>
@@ -54,17 +55,23 @@
     <a href="trends.html">Trends</a>
     <a href="insights.html">Insights</a>
     <a href="contact.html">Contact</a>
-    <button class="theme-toggle" aria-label="Toggle Theme">
-        <i data-lucide="sun" class="sun-icon"></i>
-        <i data-lucide="moon" class="moon-icon"></i>
-    </button>
+    <div class="d-flex align-items-center gap-3">
+        <button class="theme-toggle" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="nav-cart-btn" aria-label="Cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i data-lucide="shopping-cart"></i>
+            <span class="nav-cart-badge">0</span>
+        </button>
+    </div>
     <a href="#" class="btn-primary-custom" style="font-size: 1rem; padding: 0.5rem 1.5rem;" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
 </div>
 
 <!-- 1. Editorial Hero -->
 <section class="hero-section" style="min-height: 60vh; padding-top: 8rem;">
     <div class="container container-xl text-center">
-        <h1 class="hero-title max-w-700 mx-auto" style="font-size: clamp(1.2rem, 2.5vw, 3.2rem);">Understanding Technology. Inspiring What's Next.</h1>
+        <h1 class="hero-title max-w-700 mx-auto" style="font-size: clamp(1.5rem, 4vw, 3.2rem); white-space: normal;">Understanding Technology.<br class="d-md-none"> Inspiring What's Next.</h1>
         <p class="hero-subtitle mx-auto text-lg">We make the evolving world of electronics easier to explore through thoughtful insights, product analysis, and emerging technology perspectives.</p>
     </div>
 </section>
@@ -91,17 +98,17 @@
     <div class="container container-xl">
         <div class="row g-4">
             <div class="col-md-6" data-aos="fade-up">
-                <div class="glass-panel p-5 h-100">
+                <div class="glass-panel p-5 h-100 text-center d-flex flex-column align-items-center">
                     <i data-lucide="target" class="text-accent w-10 h-10 mb-4"></i>
                     <h3 class="mb-3">Our Mission</h3>
-                    <p class="text-secondary">To make technology insights clear, accessible, informative, and valuable. We strive to empower consumers and enthusiasts with the knowledge they need to make informed decisions in a complex digital landscape.</p>
+                    <p class="text-secondary mb-0">To make technology insights clear, accessible, informative, and valuable. We strive to empower consumers and enthusiasts with the knowledge they need to make informed decisions in a complex digital landscape.</p>
                 </div>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-panel p-5 h-100">
+                <div class="glass-panel p-5 h-100 text-center d-flex flex-column align-items-center">
                     <i data-lucide="eye" class="text-cyan w-10 h-10 mb-4"></i>
                     <h3 class="mb-3">Our Vision</h3>
-                    <p class="text-secondary">To become the world's most trusted destination for technology discovery, rigorous gadget analysis, and forward-looking innovation insights.</p>
+                    <p class="text-secondary mb-0">To become the world's most trusted destination for technology discovery, rigorous gadget analysis, and forward-looking innovation insights.</p>
                 </div>
             </div>
         </div>
@@ -378,6 +385,32 @@
                     </form>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Shopping Cart -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-heading fw-bold d-flex align-items-center gap-2">
+                    <i data-lucide="shopping-cart" class="text-accent"></i> Your Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsList" class="d-flex flex-column gap-2 mb-3">
+                    <!-- Populated dynamically via JS -->
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-color">
+                    <span class="text-secondary fw-semibold">Subtotal</span>
+                    <strong class="h5 mb-0 text-accent fw-bold" id="cartTotalPrice">$0.00</strong>
+                </div>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn-primary-custom w-100 justify-content-center" data-bs-dismiss="modal">Proceed to Checkout</button>
             </div>
         </div>
     </div>
